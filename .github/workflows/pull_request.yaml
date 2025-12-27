@@ -6,15 +6,14 @@ on:
       - '.github/**'
       - 'README.md'
       - 'tools/**'
-    branches:
-      - main
+  push:
 
 concurrency: 
   group: release # only 1 anything at a time
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - uses: hmarr/debug-action@v2
